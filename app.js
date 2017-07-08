@@ -12,7 +12,7 @@ function test(){
     if(!testRunMovements()) {
         console.log('testRunMovements unsuccessfull');
         return false;
-    } 
+    }
     console.log("SUCCESS!")
     return true;
 }
@@ -53,7 +53,7 @@ function testCreateRover(){
     startPos = {x: 1,y: 2,d: 'N'};
     realRover = createRover(mapSize, startPos);
     if (realRover == 'undefined' || realRover == null) return false;
-    
+
 
     return true;
 
@@ -86,7 +86,7 @@ function testGetPosition(){
     if(returnedPos.x != startPos.x || returnedPos.y != startPos.y || returnedPos.d != startPos.d){
         return false;
     }
-    
+
     return true;
 }
 
@@ -149,15 +149,15 @@ function go(){
     } else {
         alert("Please input accurate directions");
     }
-    
-    
+
+
 }
 
 //Turn the map coords into an object
 function getMapSizeObj(mapX,mapY){
     var map = mapX+mapY
     if (map.length != 2 ){
-        alert("Please enter correct coordinates for the map size.");    
+        alert("Please enter correct coordinates for the map size.");
         mapXY.focus();
     }
     return {x: map[0], y: map[1]};
@@ -172,4 +172,3 @@ function getPosObj(posX,posY,posD){
     }
     return {x: pos[0], y: pos[1], d: pos[2]};
 }
-

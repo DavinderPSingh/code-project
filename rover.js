@@ -16,7 +16,7 @@ function createRover(mapSize, startPos){
     //ridiculously large validation
     //this would probably need to go into another separate function in the long run
     if(startPos.x > mapSize.x || startPos.y > mapSize.y || mapSize.x < 1 || mapSize.x > 1000 || mapSize.y < 1 || mapSize.y > 1000 ){
-       alert("Please review your inputs.") 
+       alert("Please review your inputs.")
         return null;
     }   else{
         this.map = {};
@@ -41,7 +41,7 @@ function createRover(mapSize, startPos){
         }
         //map size handler -- the rover will never go off the cliff!
         if(myPos.x > mapSize.x ){
-            myPos.x = mapSize.x;   
+            myPos.x = mapSize.x;
         }
         if(myPos.y > mapSize.y ){
             myPos.y = mapSize.y;
@@ -53,7 +53,7 @@ function createRover(mapSize, startPos){
             myPos.y = 0;
         }
     }
-    
+
     this.turnLeft = function(direction){
         switch (direction){
             case "N":
@@ -108,7 +108,7 @@ function createRover(mapSize, startPos){
         }
         for(i=0;i<directions.length;i++){
             if(directions[i].toUpperCase() != 'L' && directions[i].toUpperCase() != 'R' & directions[i].toUpperCase() != 'M'){
-                return false;   
+                return false;
             }
         }
         for(i=0;i<directions.length;i++){
@@ -121,4 +121,3 @@ function createRover(mapSize, startPos){
     };
     return this;
 };
-
